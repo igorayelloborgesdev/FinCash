@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "name": " Industrial and Commercial Bank of China"
+  },
+  {
+    "id": 2,
+    "name": " China Construction Bank Corporation"
+  },
+  {
+    "id": 3,
+    "name": " Agricultural Bank of China"
+  },
+  {
+    "id": 4,
+    "name": " Bank of China"
+  },
+  {
+    "id": 5,
+    "name": " Mitsubishi UFJ Financial Group"
+  },
+  {
+    "id": 6,
+    "name": " JPMorgan Chase & Co."
+  },
+  {
+    "id": 7,
+    "name": " HSBC Holdings PLC"
+  },
+  {
+    "id": 8,
+    "name": " Bank of America"
+  },
+  {
+    "id": 9,
+    "name": " BNP Paribas"
+  },
+  {
+    "id": 10,
+    "name": " Crédit Agricole"
+  },
+  {
+    "id": 11,
+    "name": " Citigroup Inc."
+  },
+  {
+    "id": 12,
+    "name": " Japan Post Bank"
+  },
+  {
+    "id": 13,
+    "name": " Wells Fargo & Co."
+  },
+  {
+    "id": 14,
+    "name": " Sumitomo Mitsui Financial Group"
+  },
+  {
+    "id": 15,
+    "name": " Mizuho Financial Group"
+  },
+  {
+    "id": 16,
+    "name": " Banco Santander"
+  },
+  {
+    "id": 17,
+    "name": " Deutsche Bank"
+  },
+  {
+    "id": 18,
+    "name": " Société Générale"
+  },
+  {
+    "id": 19,
+    "name": " Groupe BPCE"
+  },
+  {
+    "id": 20,
+    "name": " Barclays PLC"
+  },
+  {
+    "id": 21,
+    "name": " Bank of Communications"
+  },
+  {
+    "id": 22,
+    "name": " Postal Savings Bank of China"
+  },
+  {
+    "id": 23,
+    "name": " Royal Bank of Canada"
+  },
+  {
+    "id": 24,
+    "name": " DNB ASA"
+  },
+  {
+    "id": 25,
+    "name": " ING Group"
+  },
+  {
+    "id": 26,
+    "name": " Toronto-Dominion Bank"
+  },
+  {
+    "id": 27,
+    "name": " China Merchants Bank"
+  },
+  {
+    "id": 28,
+    "name": " Crédit Mutuel"
+  },
+  {
+    "id": 29,
+    "name": " Norinchukin Bank"
+  },
+  {
+    "id": 30,
+    "name": " UBS"
+  },
+  {
+    "id": 31,
+    "name": " Industrial Bank (China)"
+  },
+  {
+    "id": 32,
+    "name": " UniCredit"
+  },
+  {
+    "id": 33,
+    "name": " Goldman Sachs"
+  },
+  {
+    "id": 34,
+    "name": " Shanghai Pudong Development Bank"
+  },
+  {
+    "id": 35,
+    "name": " Intesa Sanpaolo"
+  },
+  {
+    "id": 36,
+    "name": " Royal Bank of Scotland Group"
+  },
+  {
+    "id": 37,
+    "name": " China CITIC Bank"
+  },
+  {
+    "id": 38,
+    "name": " China Minsheng Bank"
+  },
+  {
+    "id": 39,
+    "name": " Morgan Stanley"
+  },
+  {
+    "id": 40,
+    "name": " Scotiabank"
+  },
+  {
+    "id": 41,
+    "name": " Credit Suisse"
+  },
+  {
+    "id": 42,
+    "name": " Banco Bilbao Vizcaya Argentaria"
+  },
+  {
+    "id": 43,
+    "name": " Commonwealth Bank"
+  },
+  {
+    "id": 44,
+    "name": " Standard Chartered"
+  },
+  {
+    "id": 45,
+    "name": " Australia and New Zealand Banking Group"
+  },
+  {
+    "id": 46,
+    "name": " Rabobank"
+  },
+  {
+    "id": 47,
+    "name": " Nordea"
+  },
+  {
+    "id": 48,
+    "name": " Westpac"
+  },
+  {
+    "id": 49,
+    "name": " China Everbright Bank"
+  },
+  {
+    "id": 50,
+    "name": " Bank of Montreal"
+  },
+  {
+    "id": 51,
+    "name": " DZ Bank"
+  },
+  {
+    "id": 52,
+    "name": " National Australia Bank"
+  },
+  {
+    "id": 53,
+    "name": " Danske Bank"
+  },
+  {
+    "id": 54,
+    "name": " State Bank of India"
+  },
+  {
+    "id": 55,
+    "name": " Resona Holdings"
+  },
+  {
+    "id": 56,
+    "name": " Commerzbank"
+  },
+  {
+    "id": 57,
+    "name": " Sumitomo Mitsui Trust Holdings"
+  },
+  {
+    "id": 58,
+    "name": " Ping An Bank"
+  },
+  {
+    "id": 59,
+    "name": " Canadian Imperial Bank of Commerce"
+  },
+  {
+    "id": 60,
+    "name": " U.S. Bancorp"
+  },
+  {
+    "id": 61,
+    "name": " CaixaBank"
+  },
+  {
+    "id": 62,
+    "name": " BB&T and SunTrust Banks"
+  },
+  {
+    "id": 63,
+    "name": " ABN Amro Group NV"
+  },
+  {
+    "id": 64,
+    "name": " KB Financial Group Inc"
+  },
+  {
+    "id": 65,
+    "name": " Shinhan Financial Group"
+  },
+  {
+    "id": 66,
+    "name": " Sberbank of Russia"
+  },
+  {
+    "id": 67,
+    "name": " Nomura Holdings Inc."
+  },
+  {
+    "id": 68,
+    "name": " DBS Bank"
+  },
+  {
+    "id": 69,
+    "name": " Itaú Unibanco"
+  },
+  {
+    "id": 70,
+    "name": " PNC Financial Services"
+  },
+  {
+    "id": 71,
+    "name": " Hua Xia Bank"
+  },
+  {
+    "id": 72,
+    "name": " Nonghyup Bank"
+  },
+  {
+    "id": 73,
+    "name": " Capital One"
+  },
+  {
+    "id": 74,
+    "name": " Bank of Beijing"
+  },
+  {
+    "id": 75,
+    "name": " Bank of New York Mellon"
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "name": "Walmart"
+  },
+  {
+    "id": 2,
+    "name": "Sinopec"
+  },
+  {
+    "id": 3,
+    "name": "Royal Dutch Shell"
+  },
+  {
+    "id": 4,
+    "name": "China National Petroleum"
+  },
+  {
+    "id": 5,
+    "name": "State Grid"
+  },
+  {
+    "id": 6,
+    "name": "Saudi Aramco"
+  },
+  {
+    "id": 7,
+    "name": "BP"
+  },
+  {
+    "id": 8,
+    "name": "ExxonMobil"
+  },
+  {
+    "id": 9,
+    "name": "Volkswagen"
+  },
+  {
+    "id": 10,
+    "name": "Toyota"
+  },
+  {
+    "id": 11,
+    "name": "Apple"
+  },
+  {
+    "id": 12,
+    "name": "Berkshire Hathaway"
+  },
+  {
+    "id": 13,
+    "name": "Amazon"
+  },
+  {
+    "id": 14,
+    "name": "UnitedHealth"
+  },
+  {
+    "id": 15,
+    "name": "Samsung Electronics"
+  },
+  {
+    "id": 16,
+    "name": "Glencore"
+  },
+  {
+    "id": 17,
+    "name": "McKesson"
+  },
+  {
+    "id": 18,
+    "name": "Daimler"
+  },
+  {
+    "id": 19,
+    "name": "CVS Health"
+  },
+  {
+    "id": 20,
+    "name": "Total"
+  },
+  {
+    "id": 21,
+    "name": "China State Construction"
+  },
+  {
+    "id": 22,
+    "name": "Trafigura"
+  },
+  {
+    "id": 23,
+    "name": "Foxconn"
+  },
+  {
+    "id": 24,
+    "name": "Exor"
+  },
+  {
+    "id": 25,
+    "name": "AT&T"
+  },
+  {
+    "id": 26,
+    "name": "ICBC"
+  },
+  {
+    "id": 27,
+    "name": "AmerisourceBergen"
+  },
+  {
+    "id": 28,
+    "name": "Chevron"
+  },
+  {
+    "id": 29,
+    "name": "Ping An Insurance"
+  },
+  {
+    "id": 30,
+    "name": "Ford"
+  },
+  {
+    "id": 31,
+    "name": "China Construction Bank"
+  },
+  {
+    "id": 32,
+    "name": "General Motors"
+  },
+  {
+    "id": 33,
+    "name": "Mitsubishi"
+  },
+  {
+    "id": 34,
+    "name": "Honda"
+  },
+  {
+    "id": 35,
+    "name": "Costco"
+  },
+  {
+    "id": 36,
+    "name": "Agricultural Bank of China"
+  },
+  {
+    "id": 37,
+    "name": "Alphabet"
+  },
+  {
+    "id": 38,
+    "name": "Cardinal Health"
+  },
+  {
+    "id": 39,
+    "name": "SAIC Motor"
+  },
+  {
+    "id": 40,
+    "name": "Walgreens Boots Alliance"
+  },
+  {
+    "id": 41,
+    "name": "JPMorgan Chase"
+  },
+  {
+    "id": 42,
+    "name": "Gazprom"
+  },
+  {
+    "id": 43,
+    "name": "Verizon"
+  },
+  {
+    "id": 44,
+    "name": "Bank of China"
+  },
+  {
+    "id": 45,
+    "name": "Allianz"
+  },
+  {
+    "id": 46,
+    "name": "AXA"
+  },
+  {
+    "id": 47,
+    "name": "Kroger"
+  },
+  {
+    "id": 48,
+    "name": "General Electric"
+  },
+  {
+    "id": 49,
+    "name": "Fannie Mae"
+  },
+  {
+    "id": 50,
+    "name": "Lukoil"
+  }
+]

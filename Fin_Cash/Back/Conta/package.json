@@ -1,0 +1,18 @@
+{
+  "name": "Conta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ContaCorrenteController.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "ContaCorrenteController.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async-wait-until": "^1.2.4",
+    "express": "^4.17.1",
+    "sqlite3": "^4.1.1"
+  }
+}

@@ -1,0 +1,78 @@
+FIN CA$H DOC
+
+Ferramentas
+
+CypressJS (Capturar dados)
+Mocha (Testes unitário TDD (Não está autônomo))
+Gulp (Gerar APIs)
+SQLite3 (Banco de dados)
+NodeJS (API Backend)
+React JS (Front)
+Bootstrap (Web Components)
+styled-components (CSS in JS)
+Docker (Virtualização)
+
+----------------------------------------------------------------------
+
+Telas
+
+
+.Styled Components css-in-js;
+->Tema 1_11
+
+@.Idioma
+.Selenium (Teste END TO END) 
+.API
+Devops
+.Kubernetes
+.Chamadas API
+@Rota pública  .Login
+@Rota segura .Incluir Movimentação
+@Rota segura .Consultar Movimentação
+API - CSS
+@Rota segura .Dashboard
+.Tensor flow (IA)
+Automatizar criar JSON
+Export
+.Excel
+.Word
+.Power Point
+.ApiaryIO
+
+
+
+
+
+
+
+
+
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+
+docker build -t teste/nodejs-image-demo .
+docker run -p 5000:8080 -d teste/nodejs-image-demo
+docker-machine ls
+
+http://192.168.99.100:5000/
+
+Back
+npm install sqlite3
+npm install --save body-parser
+
+Front
+npm i --save react-bootstrap
+npm install --save react-redux
+npm i -D redux react-redux
+npm install --save react-router-dom
+npm i -s react-google-charts
+npm install react-select-search --save
+npm install react-day-picker --save
+npm install react-bootstrap-table --save
+npm install react-currency-input --save
+
+npm install styled-components --save
+npm install node-sass

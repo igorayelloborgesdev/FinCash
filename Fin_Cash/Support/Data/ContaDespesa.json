@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1,
+    "name": " JPMorgan Chase & Co."
+  },
+  {
+    "id": 2,
+    "name": " Industrial and Commercial Bank of China"
+  },
+  {
+    "id": 3,
+    "name": " Bank of America"
+  },
+  {
+    "id": 4,
+    "name": " Wells Fargo & Co."
+  },
+  {
+    "id": 5,
+    "name": " China Construction Bank Corporation"
+  },
+  {
+    "id": 6,
+    "name": " HSBC Holdings PLC"
+  },
+  {
+    "id": 7,
+    "name": " Agricultural Bank of China"
+  },
+  {
+    "id": 8,
+    "name": " Citigroup Inc."
+  },
+  {
+    "id": 9,
+    "name": " Bank of China"
+  },
+  {
+    "id": 10,
+    "name": " China Merchants Bank"
+  },
+  {
+    "id": 11,
+    "name": " Royal Bank of Canada"
+  },
+  {
+    "id": 12,
+    "name": " Banco Santander"
+  },
+  {
+    "id": 13,
+    "name": " Commonwealth Bank"
+  },
+  {
+    "id": 14,
+    "name": " Mitsubishi UFJ Financial Group"
+  },
+  {
+    "id": 15,
+    "name": " Toronto-Dominion Bank"
+  },
+  {
+    "id": 16,
+    "name": " BNP Paribas"
+  },
+  {
+    "id": 17,
+    "name": " Goldman Sachs"
+  },
+  {
+    "id": 18,
+    "name": " Sberbank of Russia"
+  },
+  {
+    "id": 19,
+    "name": " Morgan Stanley"
+  },
+  {
+    "id": 20,
+    "name": " U.S. Bancorp"
+  },
+  {
+    "id": 21,
+    "name": " HDFC Bank"
+  },
+  {
+    "id": 22,
+    "name": " Itau Unibanco"
+  },
+  {
+    "id": 23,
+    "name": " Westpac"
+  },
+  {
+    "id": 24,
+    "name": " Scotiabank"
+  },
+  {
+    "id": 25,
+    "name": " ING Group"
+  },
+  {
+    "id": 26,
+    "name": " UBS"
+  },
+  {
+    "id": 27,
+    "name": " Charles Schwab"
+  },
+  {
+    "id": 28,
+    "name": " PNC Financial Services Group"
+  },
+  {
+    "id": 29,
+    "name": " Lloyds Banking Group"
+  },
+  {
+    "id": 30,
+    "name": " Sumitomo Mitsui Financial Group"
+  },
+  {
+    "id": 31,
+    "name": " Bank of Communications"
+  },
+  {
+    "id": 32,
+    "name": " Australia and New Zealand Banking Group"
+  },
+  {
+    "id": 33,
+    "name": " Banco Bradesco"
+  },
+  {
+    "id": 34,
+    "name": " National Australia Bank"
+  },
+  {
+    "id": 35,
+    "name": " Intesa Sanpaolo"
+  },
+  {
+    "id": 36,
+    "name": " Banco Bilbao Vizcaya Argentaria"
+  },
+  {
+    "id": 37,
+    "name": " Japan Post Bank"
+  },
+  {
+    "id": 38,
+    "name": " Bank of New York Mellon"
+  },
+  {
+    "id": 39,
+    "name": " Shanghai Pudong Development Bank"
+  },
+  {
+    "id": 40,
+    "name": " Industrial Bank Co."
+  },
+  {
+    "id": 41,
+    "name": " BOC Hong Kong"
+  },
+  {
+    "id": 42,
+    "name": " Bank of Montreal"
+  },
+  {
+    "id": 43,
+    "name": " Crédit Agricole"
+  },
+  {
+    "id": 44,
+    "name": " DBS Group"
+  },
+  {
+    "id": 45,
+    "name": " Nordea Bank"
+  },
+  {
+    "id": 46,
+    "name": " Capital One"
+  },
+  {
+    "id": 47,
+    "name": " Royal Bank of Scotland Group"
+  },
+  {
+    "id": 48,
+    "name": " Mizuho Financial Group"
+  },
+  {
+    "id": 49,
+    "name": " Credit Suisse"
+  },
+  {
+    "id": 50,
+    "name": " Postal Savings Bank of China"
+  },
+  {
+    "id": 51,
+    "name": " China Minsheng Bank"
+  },
+  {
+    "id": 52,
+    "name": " UniCredit"
+  },
+  {
+    "id": 53,
+    "name": " China CITIC Bank"
+  },
+  {
+    "id": 54,
+    "name": " Hang Seng Bank"
+  },
+  {
+    "id": 55,
+    "name": " Société Générale"
+  },
+  {
+    "id": 56,
+    "name": " Barclays PLC"
+  },
+  {
+    "id": 57,
+    "name": " CIBC"
+  },
+  {
+    "id": 58,
+    "name": " Bank Central Asia"
+  },
+  {
+    "id": 59,
+    "name": " BB&T Corp"
+  },
+  {
+    "id": 60,
+    "name": " Oversea-Chinese Banking Corp"
+  },
+  {
+    "id": 61,
+    "name": " State Bank of India"
+  },
+  {
+    "id": 62,
+    "name": " State Street"
+  },
+  {
+    "id": 63,
+    "name": " Deutsche Bank"
+  },
+  {
+    "id": 64,
+    "name": " KBC Group"
+  },
+  {
+    "id": 65,
+    "name": " Danske Bank"
+  },
+  {
+    "id": 66,
+    "name": " Ping An Bank"
+  },
+  {
+    "id": 67,
+    "name": " Standard Chartered"
+  },
+  {
+    "id": 68,
+    "name": " United Overseas Bank"
+  },
+  {
+    "id": 69,
+    "name": " Qatar National Bank"
+  },
+  {
+    "id": 70,
+    "name": " Bank Rakyat"
+  }
+]
