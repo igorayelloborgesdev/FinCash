@@ -11,11 +11,9 @@ import ConsultarMovimentacao from "./ConsultarMovimentacao";
 import logo from "../Resources/burgerMenu.png";
 import { Tema1_2_Menu, Icon } from "../styles/css/Geral";
 
-
 import { Theme } from "../styles/css/TESTE";
 import { clickTESTE, clickChangeTheme } from "../actions/TESTEAction";
 import { Theme1 } from "../styles/css/Geral_v2";
-
 
 class Home extends Component {
   constructor(props) {
@@ -26,18 +24,18 @@ class Home extends Component {
     // this.props.clickTESTE("HAMILTON");
   }
   state = {
-    themeMode: "light",    
+    themeMode: "light"
   };
   redirect(name) {
     window.location.href = name;
-  }    
+  }
   render() {
     const { newValue } = this.props;
     const { newValue1 } = this.props;
 
-    return (            
-        <Theme1 modeID={newValue1}>         
-        <Tema1_2_Menu>
+    return (
+      <Theme1 modeID={newValue1}>
+        <Tema1_2_Menu className="menuName">
           <Container>
             <Row>
               <Col md={12}>
@@ -46,17 +44,6 @@ class Home extends Component {
                     <img src={logo} alt="logo" />
                   </Icon>
                   <NavDropdown title="" id="nav-dropdown">
-
-                  
-                    {/* <Theme>
-                      <h1>{newValue1}</h1>
-                    </Theme>
-                    <Theme1 modeID={this.state.themeMode}>                  
-                     <h1>Hello World</h1>
-                     <p>Lorem Ipsum</p>                    
-                    </Theme1>  */}
-
-                    
                     <NavDropdown.Item
                       eventKey="1.1"
                       onClick={() => this.redirect("/")}
@@ -78,13 +65,13 @@ class Home extends Component {
                     <hr></hr>
                     <NavDropdown.Item
                       eventKey="2.1"
-                      onClick={(e) => this.ChangeTheme(e, 'tema1_2')}
+                      onClick={e => this.ChangeTheme(e, "tema1_2")}
                     >
                       Tema 1
                     </NavDropdown.Item>
                     <NavDropdown.Item
                       eventKey="2.2"
-                      onClick={(e) => this.ChangeTheme(e, 'tema1_11')}
+                      onClick={e => this.ChangeTheme(e, "tema1_11")}
                     >
                       Tema 2
                     </NavDropdown.Item>
@@ -107,17 +94,17 @@ class Home extends Component {
             </Route>
           </Switch>
         </Router>
-        </Theme1>      
+      </Theme1>
     );
   }
-  PostclickTESTE(event){        
+  PostclickTESTE(event) {
     event.preventDefault();
     this.props.clickTESTE("HAMILTON");
   }
-  ChangeTheme(event, id) {              
+  ChangeTheme(event, id) {
     event.preventDefault();
-    this.setState({ themeMode: id });       
-    this.props.clickChangeTheme(id); 
+    this.setState({ themeMode: id });
+    this.props.clickChangeTheme(id);
   }
 }
 

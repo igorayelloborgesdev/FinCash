@@ -93,7 +93,7 @@ const Tema1_2_LoginInput = styled.div`
   input[type="text"]:blur {
     background-color: #26273d !important;
     border-color: #a3a7b0 !important;
-    border: 2px solid #a3a7b0 !important;
+  
     border-radius: 2px !important;
     font-weight: 800;
     color: #a3a7b0;

@@ -12,8 +12,7 @@ export const clickTESTE = param1 => (
 );
 
 export const clickChangeTheme = param1 => ( 
-  console.log("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"), 
-  console.log("TEMA " + param1),
+  localStorage.setItem('tema', param1),  
   {
     type: CLICK_CHANGE_THEME_VALUE,
     newValue1: param1
