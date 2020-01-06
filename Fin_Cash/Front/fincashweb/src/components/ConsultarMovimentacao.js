@@ -19,6 +19,8 @@ import {
   Tema1_2_BodyResultado  
 } from "../styles/css/Geral";
 
+import { clickChangeLang } from "../actions/TESTEAction";
+
 var ReactBsTable = require("react-bootstrap-table");
 var BootstrapTable = ReactBsTable.BootstrapTable;
 var TableHeaderColumn = ReactBsTable.TableHeaderColumn;
@@ -156,22 +158,25 @@ class ConsultarMovimentacao extends Component {
   };
 
   render() {    
+
+    const { languageResources } = this.props;           
+
     return (
       <div className="cardBoxPos">        
-        <Tema1_2_H1>Consultar Movimentação</Tema1_2_H1>
+        <Tema1_2_H1>{languageResources.ConsultaMovimentacoesFinanceirasPagar}</Tema1_2_H1>
         <Tema1_2_CardContainer>
           <Container>
             <Row>
               <Col md={12}>
                 <Card>
                   <Card.Header>
-                    <h3>Filtro</h3>
+                    <h3>{languageResources.Filtros}</h3>
                     <hr></hr>
                   </Card.Header>
                   <Card.Body>
                     <Row>
                       <Col md={3}>
-                        <label>Matriz Contábil</label>
+                      <label>{languageResources.MatrizContabil}</label>
                         <Row>
                           <Col md={12}>
                             <div className="container">
@@ -181,7 +186,7 @@ class ConsultarMovimentacao extends Component {
                         </Row>
                       </Col>
                       <Col md={3}>
-                        <label>Filial</label>
+                      <label>{languageResources.Filial}</label>
                         <Row>
                           <Col md={12}>
                             <div className="container">
@@ -191,7 +196,7 @@ class ConsultarMovimentacao extends Component {
                         </Row>
                       </Col>
                       <Col md={3}>
-                        <label>Conta Corrente</label>
+                      <label>{languageResources.ContaCorrente}</label>
                         <Row>
                           <Col md={12}>
                             <div className="container">
@@ -201,7 +206,7 @@ class ConsultarMovimentacao extends Component {
                         </Row>
                       </Col>
                       <Col md={3}>
-                        <label>Conta Despesa</label>
+                      <label>{languageResources.ContaDespesa}</label>
                         <Row>
                           <Col md={12}>
                             <div className="container">
@@ -212,8 +217,8 @@ class ConsultarMovimentacao extends Component {
                       </Col>
                     </Row>
                     <Row>
-                      <Col md={3}>
-                        <label>Fornecedor</label>
+                      <Col md={6}>
+                      <label>{languageResources.Fornecedor}</label>
                         <Row>
                           <Col md={12}>
                             <div className="container">
@@ -222,8 +227,8 @@ class ConsultarMovimentacao extends Component {
                           </Col>
                         </Row>
                       </Col>
-                      <Col md={3}>
-                        <label>Operação</label>
+                      <Col md={6}>
+                      <label>{languageResources.Operacao}</label>
                         <Row>
                           <Col md={12}>
                             <div className="container">
@@ -231,35 +236,11 @@ class ConsultarMovimentacao extends Component {
                             </div>
                           </Col>
                         </Row>
-                      </Col>
-                      <Col md={3}>
-                        <label>Número Documento</label>
-                        <Row>
-                          <Col md={12}>
-                            <Form.Control
-                              className="inputCurrency"
-                              type="text"
-                              value={this.state.NumeroDocumento}
-                              onChange={this.onHandleChangeNumeric}
-                            />
-                          </Col>
-                        </Row>
-                      </Col>
-                      <Col md={3}>
-                        <label>Série da Nota Fiscal</label>
-                        <Row>
-                          <Col md={12}>
-                            <Form.Control
-                              className="inputCurrency"
-                              type="text"
-                            />
-                          </Col>
-                        </Row>
-                      </Col>
+                      </Col>                     
                     </Row>
                     <Row>
                       <Col md={3}>
-                        <label>Data de emissão</label>
+                      <label>{languageResources.DataEmissao}</label>
                         <Row>
                           <Col md={6}>
                             <DayPickerInput
@@ -274,7 +255,7 @@ class ConsultarMovimentacao extends Component {
                         </Row>
                       </Col>
                       <Col md={3}>
-                        <label>Data de emissão</label>
+                      <label>{languageResources.DataCompetencia}</label>
                         <Row>
                           <Col md={6}>
                             <DayPickerInput
@@ -289,7 +270,7 @@ class ConsultarMovimentacao extends Component {
                         </Row>
                       </Col>
                       <Col md={3}>
-                        <label>Data de emissão</label>
+                      <label>{languageResources.DataVencimento}</label>
                         <Row>
                           <Col md={6}>
                             <DayPickerInput
@@ -304,7 +285,7 @@ class ConsultarMovimentacao extends Component {
                         </Row>
                       </Col>
                       <Col md={3}>
-                        <label>Data de emissão</label>
+                      <label>{languageResources.DataBaixa}</label>
                         <Row>
                           <Col md={6}>
                             <DayPickerInput
@@ -322,8 +303,8 @@ class ConsultarMovimentacao extends Component {
                     <hr></hr>
                     <Row>
                       <Col md={12}>
-                        <Button variant="primary">Pesquisar</Button>
-                        <Button variant="secondary">Limpar</Button>
+                        <Button variant="primary">{languageResources.Pesquisar}</Button>
+                        <Button variant="secondary">{languageResources.Limpar}</Button>
                       </Col>
                     </Row>
                   </Card.Body>
@@ -336,7 +317,7 @@ class ConsultarMovimentacao extends Component {
             <Container>
               <Card>
                 <Card.Header>
-                  <h3>Resultado</h3>
+                  <h3>{languageResources.Resultado}</h3>
                   <hr></hr>
                 </Card.Header>
                 <Tema1_2_BodyResultado>
@@ -371,7 +352,11 @@ class ConsultarMovimentacao extends Component {
   }
 }
 
+const mapStateToProps = store => ({  
+  languageResources: store.clickState.languageResources
+});
+
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({}, dispatch);
+  return bindActionCreators({clickChangeLang}, dispatch);
 }
-export default connect(null, mapDispatchToProps)(ConsultarMovimentacao);
+export default connect(mapStateToProps, mapDispatchToProps)(ConsultarMovimentacao);

@@ -12,16 +12,15 @@ import logo from "../Resources/burgerMenu.png";
 import { Tema1_2_Menu, Icon } from "../styles/css/Geral";
 
 import { Theme } from "../styles/css/TESTE";
-import { clickTESTE, clickChangeTheme } from "../actions/TESTEAction";
+import { clickTESTE, clickChangeTheme, clickChangeLang } from "../actions/TESTEAction";
 import { Theme1 } from "../styles/css/Geral_v2";
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.redirect = this.redirect.bind(this);
-    this.PostclickTESTE = this.PostclickTESTE.bind(this);
-    // this.PostclickChangeTheme = this.PostclickChangeTheme.bind(this);
-    // this.props.clickTESTE("HAMILTON");
+    this.PostclickTESTE = this.PostclickTESTE.bind(this);   
+    this.PostclickChangeLang = this.PostclickChangeLang.bind(this); 
   }
   state = {
     themeMode: "light"
@@ -32,6 +31,7 @@ class Home extends Component {
   render() {
     const { newValue } = this.props;
     const { newValue1 } = this.props;
+    const { languageResources } = this.props;           
 
     return (
       <Theme1 modeID={newValue1}>
@@ -48,33 +48,108 @@ class Home extends Component {
                       eventKey="1.1"
                       onClick={() => this.redirect("/")}
                     >
-                      Dashboard
+                      {languageResources.Dashboard}
                     </NavDropdown.Item>
                     <NavDropdown.Item
                       eventKey="1.2"
                       onClick={() => this.redirect("/IncluirMovimentacao")}
                     >
-                      Incluir movimentação
+                      {languageResources.IncluirMovimentacao}
                     </NavDropdown.Item>
                     <NavDropdown.Item
                       eventKey="1.3"
                       onClick={() => this.redirect("/ConsultarMovimentacao")}
                     >
-                      Consultar movimentação
+                      {languageResources.ConsultarMovimentacao}
                     </NavDropdown.Item>
                     <hr></hr>
                     <NavDropdown.Item
                       eventKey="2.1"
                       onClick={e => this.ChangeTheme(e, "tema1_2")}
                     >
-                      Tema 1
+                      {languageResources.Tema1}
                     </NavDropdown.Item>
                     <NavDropdown.Item
                       eventKey="2.2"
                       onClick={e => this.ChangeTheme(e, "tema1_11")}
                     >
-                      Tema 2
+                      {languageResources.Tema2}
                     </NavDropdown.Item>
+                    <hr></hr>
+                    <NavDropdown.Item
+                      eventKey="3.1"
+                      onClick={e => this.PostclickChangeLang(e, "en")}
+                    >
+                      {languageResources.Ingles}
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      eventKey="3.2"
+                      onClick={e => this.PostclickChangeLang(e, "pt")}
+                    >
+                      {languageResources.Portugues}
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      eventKey="3.3"
+                      onClick={e => this.PostclickChangeLang(e, "ae")}
+                    >
+                      {languageResources.Arabe}
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      eventKey="3.4"
+                      onClick={e => this.PostclickChangeLang(e, "de")}
+                    >
+                      {languageResources.Alemao}
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      eventKey="3.5"
+                      onClick={e => this.PostclickChangeLang(e, "es")}
+                    >
+                      {languageResources.Espanhol}
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      eventKey="3.6"
+                      onClick={e => this.PostclickChangeLang(e, "fr")}
+                    >
+                      {languageResources.Frances}
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      eventKey="3.7"
+                      onClick={e => this.PostclickChangeLang(e, "hi")}
+                    >
+                      {languageResources.Hindi}
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      eventKey="3.8"
+                      onClick={e => this.PostclickChangeLang(e, "it")}
+                    >
+                      {languageResources.Italiano}
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      eventKey="3.9"
+                      onClick={e => this.PostclickChangeLang(e, "ja")}
+                    >
+                      {languageResources.Japones}
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      eventKey="3.10"
+                      onClick={e => this.PostclickChangeLang(e, "ko")}
+                    >
+                      {languageResources.Coreano}
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      eventKey="3.11"
+                      onClick={e => this.PostclickChangeLang(e, "ru")}
+                    >
+                      {languageResources.Russo}
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      eventKey="3.12"
+                      onClick={e => this.PostclickChangeLang(e, "zh")}
+                    >
+                      {languageResources.Chines}
+                    </NavDropdown.Item>
+
+
                   </NavDropdown>
                 </Nav>
               </Col>
@@ -106,14 +181,21 @@ class Home extends Component {
     this.setState({ themeMode: id });
     this.props.clickChangeTheme(id);
   }
+  PostclickChangeLang(event, id)
+  {        
+    event.preventDefault();
+    this.props.clickChangeLang(id);
+  }
+
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ clickTESTE, clickChangeTheme }, dispatch);
+  return bindActionCreators({ clickTESTE, clickChangeTheme, clickChangeLang }, dispatch);
 }
 
 const mapStateToProps = store => ({
   newValue: store.clickState.newValue,
-  newValue1: store.clickState.newValue1
+  newValue1: store.clickState.newValue1,
+  languageResources: store.clickState.languageResources
 });
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

@@ -18,6 +18,7 @@ import {
   Tema1_2_CardBoxPos,
   Tema1_2_Modal
 } from "../styles/css/Geral";
+import { clickChangeLang } from "../actions/TESTEAction";
 
 const scaryAnimals = [
   { label: "Alligators", value: 1 },
@@ -58,14 +59,13 @@ class IncluirMovimentacao extends Component {
   render() {
 
     const { newValue } = this.props;
+    const { languageResources } = this.props;           
 
     return (
       <Tema1_2_CardBoxPos>
         <div className="cardBoxPos">
-
-        <h1>{newValue}</h1>
-
-          <Tema1_2_H1>Incluir Movimentação</Tema1_2_H1>
+        
+          <Tema1_2_H1>{languageResources.IncluirMovimentacao}</Tema1_2_H1>
           <Tema1_2_CardContainer>
             <Container>
               <Row>
@@ -74,7 +74,7 @@ class IncluirMovimentacao extends Component {
                     <Card.Body>                      
                       <Row className="rowContainer">
                         <Col md={6} xl={3}>
-                          <label>Matriz Contábil</label>
+                          <label>{languageResources.MatrizContabil}</label>
                           <div className="container containerInput">
                             <Select options={scaryAnimals} />
                           </div>
@@ -83,7 +83,7 @@ class IncluirMovimentacao extends Component {
                           </span>
                         </Col>
                         <Col md={6} xl={3}>
-                          <label>Filial</label>
+                          <label>{languageResources.Filial}</label>
                           <div className="container">
                             <Select options={scaryAnimals} />
                           </div>
@@ -92,7 +92,7 @@ class IncluirMovimentacao extends Component {
                           </span>
                         </Col>
                         <Col md={6} xl={3}>
-                          <label>Conta Corrente</label>
+                          <label>{languageResources.ContaCorrente}</label>
                           <div className="container">
                             <Select options={scaryAnimals} />
                           </div>
@@ -101,7 +101,7 @@ class IncluirMovimentacao extends Component {
                           </span>
                         </Col>
                         <Col md={6} xl={3}>
-                          <label>Conta Despesa</label>
+                          <label>{languageResources.ContaDespesa}</label>
                           <div className="container">
                             <Select options={scaryAnimals} />
                           </div>
@@ -112,7 +112,7 @@ class IncluirMovimentacao extends Component {
 
 
                         <Col md={6}>
-                          <label>Fornecedor</label>
+                          <label>{languageResources.Fornecedor}</label>
                           <div className="container">
                             <Select options={scaryAnimals} />
                           </div>
@@ -121,7 +121,7 @@ class IncluirMovimentacao extends Component {
                           </span>
                         </Col>
                         <Col md={6}>
-                          <label>Operação</label>
+                          <label>{languageResources.Operacao}</label>
                           <div className="container">
                             <Select options={scaryAnimals} />
                           </div>
@@ -132,7 +132,7 @@ class IncluirMovimentacao extends Component {
 
 
                         <Col md={3}>
-                          <label>Data de emissão</label>
+                          <label>{languageResources.DataEmissao}</label>
                           <Row>
                             <Col md={12}>
                               <DayPickerInput
@@ -145,7 +145,7 @@ class IncluirMovimentacao extends Component {
                           </span>
                         </Col>
                         <Col md={3}>
-                          <label>Data de emissão</label>
+                          <label>{languageResources.DataCompetencia}</label>
                           <Row>
                           <Col md={12}>
                               <DayPickerInput
@@ -158,7 +158,7 @@ class IncluirMovimentacao extends Component {
                           </span>
                         </Col>
                         <Col md={3}>
-                          <label>Data de emissão</label>
+                          <label>{languageResources.DataVencimento}</label>
                           <Row>
                             <Col md={12}>
                               <DayPickerInput
@@ -171,7 +171,7 @@ class IncluirMovimentacao extends Component {
                           </span>
                         </Col>
                         <Col md={3}>
-                          <label>Data de emissão</label>
+                          <label>{languageResources.DataBaixa}</label>
                           <Row>
                             <Col md={12}>
                               <DayPickerInput
@@ -185,7 +185,7 @@ class IncluirMovimentacao extends Component {
                         </Col>
 
                         <Col md={3}>
-                          <label>Valor Original</label>
+                          <label>{languageResources.ValorOriginal}</label>
                           <Row>
                             <Col md={12}>
                               <CurrencyInput
@@ -200,7 +200,7 @@ class IncluirMovimentacao extends Component {
                           </span>
                         </Col>
                         <Col md={3}>
-                          <label>Valor Baixado</label>
+                        <label>{languageResources.ValorBaixado}</label>
                           <Row>
                             <Col md={12}>
                               <CurrencyInput
@@ -215,7 +215,7 @@ class IncluirMovimentacao extends Component {
                           </span>
                         </Col>
                         <Col md={3}>
-                          <label>Valor Caixa corrente</label>
+                        <label>{languageResources.ValorContrapartida}</label>
                           <Row>
                             <Col md={12}>
                               <CurrencyInput
@@ -230,7 +230,7 @@ class IncluirMovimentacao extends Component {
                           </span>
                         </Col>
                         <Col md={3}>
-                          <label>Valor Receita despesa</label>
+                        <label>{languageResources.EntradaContaDespesa}</label>
                           <Row>
                             <Col md={12}>
                               <CurrencyInput
@@ -247,9 +247,11 @@ class IncluirMovimentacao extends Component {
                         <Col md={12}>
                         <hr></hr>
                           <Button variant="primary" onClick={this.modalCall}>
-                            Incluir
+                          {languageResources.Pesquisar}
                           </Button>
-                          <Button variant="secondary">Limpar</Button>
+                          <Button variant="secondary">
+                          {languageResources.Limpar}
+                          </Button>
                         </Col>
                       </Row>                                            
                     </Card.Body>
@@ -273,10 +275,11 @@ class IncluirMovimentacao extends Component {
 }
 
 const mapStateToProps = store => ({
-  newValue: store.clickState.newValue
+  newValue: store.clickState.newValue,
+  languageResources: store.clickState.languageResources
 });
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ postModalCall }, dispatch);
+  return bindActionCreators({ postModalCall, clickChangeLang }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(IncluirMovimentacao);

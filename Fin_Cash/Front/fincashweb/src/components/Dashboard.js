@@ -5,6 +5,7 @@ import { Container, Row, Col} from 'reactstrap'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Chart from "react-google-charts";
+import { clickChangeLang } from "../actions/TESTEAction";
 
 const data = [
     [
@@ -155,9 +156,12 @@ class Dashboard extends Component{
     }
     
     render(){
+
+      const { languageResources } = this.props;           
+
         return(
             <div>      
-                <h1>Dashboard</h1>
+                <h1>{languageResources.Dashboard}</h1>
                 <Chart chartType="Calendar" width="100%" height="400px" data={data} />
                 <Chart chartType="ColumnChart" width="100%" height="400px" data={data2}/>
                 <Chart chartType="PieChart" width="100%" height="400px" data={data3} options={options3}/>
@@ -171,6 +175,9 @@ class Dashboard extends Component{
 }
     
 function mapDispatchToProps(dispatch){
-    return bindActionCreators({}, dispatch);
+    return bindActionCreators({clickChangeLang}, dispatch);
 }
-export default connect(null, mapDispatchToProps)(Dashboard);
+const mapStateToProps = store => ({  
+  languageResources: store.clickState.languageResources
+});
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);

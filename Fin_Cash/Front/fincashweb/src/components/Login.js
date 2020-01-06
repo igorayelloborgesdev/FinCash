@@ -6,7 +6,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { postlogin } from "../actions/index";
 
-import { clickTESTE, clickChangeTheme } from "../actions/TESTEAction";
+import { clickTESTE, clickChangeTheme, clickChangeLang } from "../actions/TESTEAction";
 
 import {
   Tema1_2_H1,
@@ -17,18 +17,67 @@ import {
 
 import { Theme1 } from "../styles/css/Geral_v2";
 
+
+
+
+
+
+// import ae from '../Resources/Translations/Idiomaar-AE.json'
+// import de from '../Resources/Translations/Idiomade-DE.json'
+// import en from '../Resources/Translations/Idiomaen-US.json'
+// import es from '../Resources/Translations/Idiomaes-ES.json'
+// import fr from '../Resources/Translations/Idiomafr_FR.json'
+// import hi from '../Resources/Translations/Idiomahi_IN.json'
+// import it from '../Resources/Translations/Idiomait_IT.json'
+// import ja from '../Resources/Translations/Idiomaja_JP.json'
+// import ko from '../Resources/Translations/Idiomako_KR.json'
+// import pt from '../Resources/Translations/Idiomapt-PT.json'
+// import ru from '../Resources/Translations/Idiomaru_RU.json'
+// import zh from '../Resources/Translations/Idiomazh-CN.json'
+
+// import i18n from "i18next";
+
+// const resources = {
+//   en: {
+//     translation: en
+//   },
+//   pt: {
+//     translation: pt
+//   }
+// };
+
+// i18n.init({
+//   resources,
+//   lng: "en"
+// });
+
+
+
+  
 class Login extends Component {
   constructor(props) {
     super(props);
     this.PostLoginData = this.PostLoginData.bind(this);
+    this.PostclickChangeLang = this.PostclickChangeLang.bind(this);
     this.state = { login: "" };
     this.state = { pass: "" };
     this.state = { errologin: "" };
-    this.state = { erropass: "" };
+    this.state = { erropass: "" };         
+    setTimeout(() => {      
+      if(!localStorage.getItem('language'))
+      {
+        this.props.clickChangeLang('default');
+      }
+      else
+      {
+        this.props.clickChangeLang(localStorage.getItem('language'));
+      }      
+    }, 3000);    
   }
-  render() {
-    const { newValue1 } = this.props;
 
+  render() {
+    const { newValue1 } = this.props;       
+    const { languageResources } = this.props;           
     return (
       <Theme1 modeID={newValue1}>
         <Tema1_2_LoginCentralizar>
@@ -36,7 +85,7 @@ class Login extends Component {
             <Container>
               <Row>
                 <Col xl={12}>
-                  <Tema1_2_H1>Login</Tema1_2_H1>
+                  <Tema1_2_H1>{languageResources.Login}</Tema1_2_H1>
                 </Col>
               </Row>
               <Row>
@@ -46,7 +95,7 @@ class Login extends Component {
                       <Tema1_2_LoginInput>
                         <Form.Control
                           type="text"
-                          placeholder="Usuário"
+                          placeholder={languageResources.Usuario}
                           onChange={evt => this.updateInputValueLogin(evt)}
                         />
                       </Tema1_2_LoginInput>
@@ -58,7 +107,7 @@ class Login extends Component {
                       <Tema1_2_LoginInput>
                         <Form.Control
                           type="password"
-                          placeholder="Senha"
+                          placeholder={languageResources.Senha}
                           onChange={evt => this.updateInputValuePass(evt)}
                         />
                       </Tema1_2_LoginInput>
@@ -67,7 +116,7 @@ class Login extends Component {
                       </span>
                     </Form.Group>
                     <Tema1_2_LoginBTN className="btnLogin" onClick={this.PostLoginData}>
-                      Entrar
+                    {languageResources.Entrar}
                     </Tema1_2_LoginBTN>
                   </Form>
                 </Col>
@@ -77,6 +126,11 @@ class Login extends Component {
         </Tema1_2_LoginCentralizar>
       </Theme1>
     );
+  }
+  PostclickChangeLang(event, id)
+  {    
+    event.preventDefault();
+    this.props.clickChangeLang(id);
   }
   PostLoginData(event) {
     this.setState({
@@ -117,10 +171,11 @@ class Login extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ postlogin }, dispatch);
+  return bindActionCreators({ postlogin, clickChangeLang }, dispatch);
 }
 
 const mapStateToProps = store => ({
-  newValue1: store.clickState.newValue1
+  newValue1: store.clickState.newValue1,
+  languageResources: store.clickState.languageResources
 });
 export default connect(mapStateToProps, mapDispatchToProps)(Login);

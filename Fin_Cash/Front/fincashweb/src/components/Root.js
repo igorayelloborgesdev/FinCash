@@ -7,8 +7,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "./Login";
 import Home from "./Home";
 
-const Root = ({ store }) => (
-  
+import { translate, Trans } from 'react-i18next';
+
+const Root = ({ store }) => (  
   <div>
     <Provider store={store}>      
         <Router>
