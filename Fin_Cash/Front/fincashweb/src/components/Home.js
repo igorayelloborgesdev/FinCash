@@ -148,8 +148,6 @@ class Home extends Component {
                     >
                       {languageResources.Chines}
                     </NavDropdown.Item>
-
-
                   </NavDropdown>
                 </Nav>
               </Col>

@@ -5,7 +5,7 @@ import { Container, Row, Col} from 'reactstrap'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Chart from "react-google-charts";
-import { clickChangeLang } from "../actions/TESTEAction";
+import { clickChangeLang, checkAuth } from "../actions/TESTEAction";
 
 const data = [
     [
@@ -152,7 +152,7 @@ const data2 = [
 class Dashboard extends Component{
 
     constructor(props){
-        super(props);    
+        super(props);
     }
     
     render(){
@@ -175,7 +175,7 @@ class Dashboard extends Component{
 }
     
 function mapDispatchToProps(dispatch){
-    return bindActionCreators({clickChangeLang}, dispatch);
+    return bindActionCreators({clickChangeLang, checkAuth}, dispatch);
 }
 const mapStateToProps = store => ({  
   languageResources: store.clickState.languageResources

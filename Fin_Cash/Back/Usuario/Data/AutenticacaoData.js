@@ -43,7 +43,8 @@ module.exports = class Autenticacao {
         }); 
     }
     async GetValidarAutenticacao(userToken)
-    {          
+    {  
+        
         return new Promise ((resolve, reject)=>{             
             try
             {                

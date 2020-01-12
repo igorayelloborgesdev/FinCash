@@ -31,7 +31,7 @@ const scaryAnimals = [
 
 class IncluirMovimentacao extends Component {
   constructor(props) {
-    super(props);
+    super(props);    
   }
   state = {
     errologin: "",
