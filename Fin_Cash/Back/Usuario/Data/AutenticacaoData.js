@@ -28,13 +28,13 @@ module.exports = class Autenticacao {
         return new Promise ((resolve, reject)=>{             
             try
             {
-                var token = jwt.sign({ id: userId }, this.codeKey, {expiresIn: '1ms'});                
+                var token = jwt.sign({ id: userId }, this.codeKey, {expiresIn: '1ms'});
                 var decoded = jwt.verify(token, this.codeKey);
                 resolve({
                     token: null                    
                 });
             }
-            catch(err) {                                
+            catch(err) {                                                           
                 resolve({
                     token: null                    
                 });
@@ -53,7 +53,11 @@ module.exports = class Autenticacao {
                     {
                         if(result == userToken.token)
                         {                        
-                            var decoded = jwt.verify(userToken.token, this.codeKey);                           
+                            var decoded = jwt.verify(userToken.token, this.codeKey);    
+                            
+                            console.log("------------------------");
+                            console.log(decoded);
+                            
                             resolve({
                                 code: 200                    
                             });                      
@@ -107,7 +111,12 @@ module.exports = class Autenticacao {
                 if (err) {
                     return console.error(err.message);
                 }                        
-                console.log('Close the database connection.');                 
+                console.log('Close the database connection.');  
+                
+
+                console.log("------------------------");
+                console.log(retorno);
+                
                 resolve(retorno);            
             }); 
         }); 

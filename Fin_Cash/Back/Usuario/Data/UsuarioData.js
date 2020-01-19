@@ -99,7 +99,15 @@ module.exports = class Usuario {
                     console.error(err.message);
                 } else {                    
                     let data = [token, id];
+
+                    console.log("------------------------");
+                        console.log(id);
+                        console.log(token);
+
                     db.run("UPDATE usuario SET token=? WHERE id=?",data,function(err,rows){
+
+                        
+
                         if (err) {
                             return console.log(err.message);
                         }

@@ -147,7 +147,10 @@ class ConsultarMovimentacao extends Component {
       { name: "somya", age: 40 }
     ],
     value: "",
-    NumeroDocumento: ""
+    NumeroDocumento: "",
+
+    ContaCorrente: JSON.parse(localStorage.getItem("ContaCorrente"))
+
   };
 
   onHandleChangeNumeric = event => {
@@ -158,6 +161,9 @@ class ConsultarMovimentacao extends Component {
   };
 
   render() {    
+
+
+    console.log(this.state.ContaCorrente);    
 
     const { languageResources } = this.props;           
 
@@ -200,7 +206,7 @@ class ConsultarMovimentacao extends Component {
                         <Row>
                           <Col md={12}>
                             <div className="container">
-                              <Select options={scaryAnimals} />
+                              <Select options={this.state.ContaCorrente} />
                             </div>
                           </Col>
                         </Row>

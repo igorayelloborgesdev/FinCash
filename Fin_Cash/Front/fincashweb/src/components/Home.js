@@ -12,7 +12,7 @@ import logo from "../Resources/burgerMenu.png";
 import { Tema1_2_Menu, Icon } from "../styles/css/Geral";
 
 import { Theme } from "../styles/css/TESTE";
-import { clickTESTE, clickChangeTheme, clickChangeLang } from "../actions/TESTEAction";
+import { clickTESTE, clickChangeTheme, clickChangeLang, GetLogoutExport } from "../actions/TESTEAction";
 import { Theme1 } from "../styles/css/Geral_v2";
 
 class Home extends Component {
@@ -21,6 +21,7 @@ class Home extends Component {
     this.redirect = this.redirect.bind(this);
     this.PostclickTESTE = this.PostclickTESTE.bind(this);   
     this.PostclickChangeLang = this.PostclickChangeLang.bind(this); 
+    this.GetClickLogout = this.GetClickLogout.bind(this);
   }
   state = {
     themeMode: "light"
@@ -148,6 +149,13 @@ class Home extends Component {
                     >
                       {languageResources.Chines}
                     </NavDropdown.Item>
+                    <hr></hr>
+                    <NavDropdown.Item
+                      eventKey="4.1"
+                      onClick={e => this.GetClickLogout(e)}
+                    >
+                      {languageResources.Voltar}
+                    </NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
               </Col>
@@ -184,11 +192,15 @@ class Home extends Component {
     event.preventDefault();
     this.props.clickChangeLang(id);
   }
-
+  GetClickLogout(event)
+  {        
+    event.preventDefault();    
+    this.props.GetLogoutExport();
+  }
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ clickTESTE, clickChangeTheme, clickChangeLang }, dispatch);
+  return bindActionCreators({ clickTESTE, clickChangeTheme, clickChangeLang, GetLogoutExport }, dispatch);
 }
 
 const mapStateToProps = store => ({

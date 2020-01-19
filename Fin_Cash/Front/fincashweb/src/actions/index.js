@@ -30,9 +30,8 @@ export function postModalCall() {
 }
 
 export function postlogin(param1, param2) {
-  // fetchContaCorrente();
+  fetchContaCorrente();
   fetchLogin(param1, md5(param2));
-
   return {
     type: "LOG_SUCCESS",
     obj: {}
@@ -44,7 +43,8 @@ async function fetchContaCorrente() {
     .get("http://192.168.99.100:5001/ContaCorrente", {
       headers: { "Content-Type": "application/json" }
     })
-    .then(function(response) {
+    .then(function(response) {      
+      localStorage.setItem("ContaCorrente", JSON.stringify(response.data));
       console.log(response.data);
       fetchContaDespesa();
     });
@@ -56,6 +56,7 @@ async function fetchContaDespesa() {
       headers: { "Content-Type": "application/json" }
     })
     .then(function(response) {
+      localStorage.setItem("ContaDespesa", JSON.stringify(response.data));
       console.log(response.data);
       fetchEmpresa();
     });
@@ -67,6 +68,7 @@ async function fetchEmpresa() {
       headers: { "Content-Type": "application/json" }
     })
     .then(function(response) {
+      localStorage.setItem("Empresa", JSON.stringify(response.data));
       console.log(response.data);
       fetchFilial();
     });
@@ -78,6 +80,7 @@ async function fetchFilial() {
       headers: { "Content-Type": "application/json" }
     })
     .then(function(response) {
+      localStorage.setItem("Filial", JSON.stringify(response.data));
       console.log(response.data);
       fetchFornecedor();
     });
@@ -89,6 +92,7 @@ async function fetchFornecedor() {
       headers: { "Content-Type": "application/json" }
     })
     .then(function(response) {
+      localStorage.setItem("Fornecedor", JSON.stringify(response.data));
       console.log(response.data);
       fetchOperacao();
     });
@@ -100,39 +104,12 @@ async function fetchOperacao() {
       headers: { "Content-Type": "application/json" }
     })
     .then(function(response) {
+      localStorage.setItem("Operacao", JSON.stringify(response.data));
       console.log(response.data);
     });
 }
 
-async function fetchLogin(aUser, aPass) {
-  // try
-  // {
-  //   const response =
-  //   await axios.post('http://192.168.99.100:5005/login',
-  //     { user: aUser, pass: aPass },
-  //     // { headers: {'Content-Type': 'application/json'}}
-  //   ).then(function(response){
-  //     if(response.data.code != 406)
-  //     {
-  //       localStorage.setItem('user', JSON.stringify(response.data));
-  //       // var user = JSON.parse(localStorage.getItem('user'));
-  //       setTimeout(() => {
-  //         window.location.href = '/';
-  //       }, 3000);
-  //     }
-  //     else
-  //     {
-  //       console.log("ERRO");
-  //     }
-  //   });
-  // }
-  // catch(e)
-  // {
-  //   console.log(e);
-  // }
-
-
-  
+async function fetchLogin(aUser, aPass) {  
   try
   {
     const response =
@@ -142,8 +119,7 @@ async function fetchLogin(aUser, aPass) {
     ).then(function(response){
       if(response.data.code != 406)
       {
-        localStorage.setItem('user', JSON.stringify(response.data));
-        // var user = JSON.parse(localStorage.getItem('user'));
+        localStorage.setItem('user', JSON.stringify(response.data));        
         setTimeout(() => {
           window.location.href = '/';
         }, 3000);

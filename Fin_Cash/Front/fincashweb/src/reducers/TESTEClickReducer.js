@@ -9,11 +9,6 @@ const initialState = {
   languageResources: {}
 };
 export const TESTEclickReducer = (state = initialState, action) => {
-
-
-  
-
-
   if (
     localStorage.getItem("tema") != null &&
     (action.type != CLICK_CHANGE_THEME_VALUE ||
@@ -77,10 +72,6 @@ export const TESTEclickReducer = (state = initialState, action) => {
       newValue1: action.newValue1
     };
   } else if (action.type == CLICK_CHANGE_LANG_VALUE) {    
-    
-    console.log(action.languageResources);
-    console.log(localStorage.getItem('language'));
-
     if(action.languageResources == 'default' && localStorage.getItem("language")  == 'default')
     {
       var key = 'en';      

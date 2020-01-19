@@ -53,7 +53,7 @@ module.exports = class Usuario {
         try{
             return new Promise ((resolve, reject)=>{             
                 autenticacao.GetLogout(userLogin.id).then( result =>{ 
-                    usuario.SetUsuarioToken(userLogin.id, null).then( result2 =>{                             
+                    usuario.SetUsuarioToken(userLogin.id, null).then( result2 =>{                         
                         resolve({
                             code: 200 
                         });
@@ -61,7 +61,7 @@ module.exports = class Usuario {
                     
                 });         
             });
-        } catch (err){                     
+        } catch (err){                           
             return err.message;
         }                                
     }

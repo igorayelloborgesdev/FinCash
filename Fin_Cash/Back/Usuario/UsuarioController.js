@@ -30,8 +30,8 @@ app.post('/login', async function (req, res) {
 });
 app.post('/logout', async function (req, res) {     
     var userLogin = {
-        id: req.body.id,        
-    }
+        id: req.body.id_usuario,        
+    }    
     usuario.GetLogout(userLogin).then( result =>{          
         res.send(result);        
     });      

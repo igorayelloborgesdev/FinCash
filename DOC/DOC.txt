@@ -14,44 +14,43 @@ Docker (Virtualização)
 
 ----------------------------------------------------------------------
 
-Telas
 
-
-.Styled Components css-in-js;
-->Tema 1_11
-
-@.Idioma
-.Selenium (Teste END TO END) 
-.API
-Devops
-.Kubernetes
 .Chamadas API
-@Rota pública  .Login
-@Rota segura .Incluir Movimentação
-@Rota segura .Consultar Movimentação
-API - CSS
-@Rota segura .Dashboard
+
+
+.Selenium (Teste END TO END) 
+.Consultar
+.Incluir
+.Dashboard
 .Tensor flow (IA)
-Automatizar criar JSON
-Export
-.Excel
-.Word
-.Power Point
+.Excel Export OWIN
+.Word Export OWIN
+.Power Point Export OWIN
 .ApiaryIO
-
-
-
-
-
-
-
-
-
-
+.React Native
+.ELK
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 
+docker build -t nodejs/conta .
+docker run -p 5001:8080 -d nodejs/conta
+docker build -t nodejs/empresa .
+docker run -p 5002:8080 -d nodejs/empresa
+docker build -t nodejs/fornecedor .
+docker run -p 5003:8080 -d nodejs/fornecedor
+docker build -t nodejs/operacao .
+docker run -p 5004:8080 -d nodejs/operacao
+docker build -t nodejs/usuario .
+docker run -p 5005:8080 -d nodejs/usuario
+
+docker build -t nodejs/movimentacoes .
+docker run -p 5006:8080 -d nodejs/movimentacoes
+
+
+
+docker image ls
+docker ps
 
 docker build -t teste/nodejs-image-demo .
 docker run -p 5000:8080 -d teste/nodejs-image-demo
@@ -62,6 +61,7 @@ http://192.168.99.100:5000/
 Back
 npm install sqlite3
 npm install --save body-parser
+npm install cors
 
 Front
 npm i --save react-bootstrap
@@ -73,6 +73,6 @@ npm install react-select-search --save
 npm install react-day-picker --save
 npm install react-bootstrap-table --save
 npm install react-currency-input --save
-
 npm install styled-components --save
-npm install node-sass
+npm install axios
+npm install md5
