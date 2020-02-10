@@ -19,7 +19,6 @@ Docker (Virtualização)
 
 
 .Selenium (Teste END TO END) 
-.Consultar
 .Incluir
 .Dashboard
 .Tensor flow (IA)
@@ -43,7 +42,6 @@ docker build -t nodejs/operacao .
 docker run -p 5004:8080 -d nodejs/operacao
 docker build -t nodejs/usuario .
 docker run -p 5005:8080 -d nodejs/usuario
-
 docker build -t nodejs/movimentacoes .
 docker run -p 5006:8080 -d nodejs/movimentacoes
 

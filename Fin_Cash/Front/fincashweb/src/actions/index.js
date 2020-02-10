@@ -111,7 +111,7 @@ async function fetchOperacao() {
 
 async function fetchLogin(aUser, aPass) {  
   try
-  {
+  {    
     const response =
     await axios.post('http://192.168.99.100:5005/login',
       { user: aUser, pass: aPass },
@@ -123,6 +123,73 @@ async function fetchLogin(aUser, aPass) {
         setTimeout(() => {
           window.location.href = '/';
         }, 3000);
+      }
+      else
+      {
+        console.log("ERRO");
+      }
+    });
+  }
+  catch(e)
+  {
+    console.log(e);
+  }
+}
+
+export function postSelect(param1) {
+  console.log(param1);
+  console.log(
+    fetchPostSelect(param1)
+  );
+  
+  return {
+    type: "POSTSELECT_SUCCESS",
+    obj: {}
+  };
+}
+
+async function fetchPostSelect(param1) {  
+  try
+  {
+    let data = [];
+    const response =
+    await axios.post('http://192.168.99.100:5006/',
+    param1,
+      { headers: {'Content-Type': 'application/json'}}
+    ).then(function(response){      
+      if(response.data.code != 406)
+      {        
+        var ContaCorrente = JSON.parse(localStorage.getItem("ContaCorrente"));        
+        var ContaDespesa = JSON.parse(localStorage.getItem("ContaDespesa"));
+        var Filial = JSON.parse(localStorage.getItem("Filial"));
+        var Fornecedor = JSON.parse(localStorage.getItem("Fornecedor"));
+        var Empresa = JSON.parse(localStorage.getItem("Empresa"));
+        var Operacao = JSON.parse(localStorage.getItem("Operacao"));
+
+        setTimeout(function(){
+          response.data.map(function(item, indice){                
+            var newItem = { 
+              contaCorrenteNome:  ContaCorrente.find(element => element.id == item.contaCorrenteID).name,
+              // contaDespesaNome:  ContaDespesa.find(element => element.id == item.contaDespesaID).name,
+              filialNome: Filial.find(element => element.id == item.filialID).name,
+              fornecedorNome: Fornecedor.find(element => element.id == item.fornecedoresID).name,
+              tipoDocumentoNome: Operacao.find(element => element.id == item.tipoDocumentoID).name,
+              matrizNome: Empresa.find(element => element.id == item.matrizID).name,            
+              valorOriginal: item.valorOriginal,
+              valorBaixado: item.valorBaixado,
+              valorContrapartida: item.valorContrapartida,
+              valorCaixaCorrente: item.valorCaixaCorrente,
+              valorReceitaDespesa: item.valorReceitaDespesa
+            };  
+            data.push(newItem);                
+          });
+          console.log(data);
+          localStorage.setItem('movimentacoes', JSON.stringify(data));                       
+        },
+        1000
+        )
+
+             
       }
       else
       {
