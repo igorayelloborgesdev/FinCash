@@ -133,7 +133,7 @@ const products = [
 class ConsultarMovimentacao extends Component {
   constructor(props) {
     super(props);
-    this.PostSelect = this.PostSelect.bind(this);
+    this.PostSelect1 = this.PostSelect1.bind(this);
     this.state = { contaCorrenteID: "" };
     this.state = { contaDespesaID: "" };
     this.state = { filialID: "" };
@@ -348,7 +348,7 @@ class ConsultarMovimentacao extends Component {
                     <hr></hr>
                     <Row>
                       <Col md={12}>
-                        <Button variant="primary" onClick={this.PostSelect}>{languageResources.Pesquisar}</Button>
+                        <Button variant="primary" onClick={this.PostSelect1}>{languageResources.Pesquisar}</Button>
                         <Button variant="secondary">{languageResources.Limpar}</Button>
                       </Col>
                     </Row>
@@ -561,7 +561,7 @@ class ConsultarMovimentacao extends Component {
     });
   }
 
-  PostSelect(event){    
+  PostSelect1(event){    
 
     var filtro = {
       contaCorrenteID: this.state.contaCorrenteID == undefined ? "" : this.state.contaCorrenteID,
@@ -581,14 +581,21 @@ class ConsultarMovimentacao extends Component {
     }
     
     event.preventDefault();
-    this.props.postSelect(filtro);
+    this.props.postSelect(filtro)
+    
+    
+    const timer = setTimeout(() => {
+      this.TESTE()    
+    }, 5000);
 
-    setTimeout(      
-        this.setState({
-          movimentacoes: JSON.parse(localStorage.getItem('movimentacoes'))
-        })
-       , 8000
-    );    
+  }
+
+  TESTE()
+  {
+    console.log('This will run after 1 second!');
+    this.setState({
+      movimentacoes: JSON.parse(localStorage.getItem('movimentacoes'))
+    })
   }
 
 }
